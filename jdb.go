@@ -97,11 +97,10 @@ func (db *Database) Delete(item Item) {
 }
 
 func (db *Database) ForEach(handler Handler) {
-	if db.isClosed {
-		return
-	}
-	for _, item := range db.items {
-		handler(item)
+	if !db.isClosed {
+		for _, item := range db.items {
+			handler(item)
+		}
 	}
 }
 
