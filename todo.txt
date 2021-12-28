@@ -1,0 +1,5 @@
+commit to github
+add comments
+add unit tests
+check test coverage
+add benchmarks
